@@ -23,7 +23,7 @@ companies.add(new StringPair("Microsoft", "1975/4/4"));
 companies.add(new StringPair("Apple", "1976/4/1"));
 
 GroupedStringList groupedList2 = new GroupedStringList();
-groupedList1.newGroupeOne("Company", companies);
+groupedList1.newGroupeTwo("Company", companies);
 SimpleExpandableListAdapter adapter2 = GroupedAdapterBuilder.fromOne(groupedList1);
 ```
 
