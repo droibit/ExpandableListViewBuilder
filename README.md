@@ -17,14 +17,14 @@ groupedList1.newGroupeOne("Programming", languages);
 SimpleExpandableListAdapter adapter1 = GroupedAdapterBuilder.fromOne(groupedList1);
 
 // 子項目が2つの場合
+GroupedStringList groupedList2 = new GroupedStringList();
 List<StringPair> companies = new ArrayList<StringPair>();
 companies.add(new StringPair("Google", "1998/9/4"));
 companies.add(new StringPair("Microsoft", "1975/4/4"));
 companies.add(new StringPair("Apple", "1976/4/1"));
 
-GroupedStringList groupedList2 = new GroupedStringList();
-groupedList1.newGroupeTwo("Company", companies);
-SimpleExpandableListAdapter adapter2 = GroupedAdapterBuilder.fromOne(groupedList1);
+groupedList2.newGroupeTwo("Company", companies);
+SimpleExpandableListAdapter adapter2 = GroupedAdapterBuilder.fromTwo(groupedList2);
 ```
 
 ## License
