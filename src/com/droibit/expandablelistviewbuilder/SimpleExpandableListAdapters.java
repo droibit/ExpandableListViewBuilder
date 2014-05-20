@@ -12,9 +12,9 @@ import android.widget.SimpleExpandableListAdapter;
  * @author kumagai
  *
  */
-public final class GroupedAdapterBuilder {
+public final class SimpleExpandableListAdapters {
 	
-	private GroupedAdapterBuilder() {
+	private SimpleExpandableListAdapters() {
 	}
 
 	/**
@@ -23,16 +23,16 @@ public final class GroupedAdapterBuilder {
 	 * @param groupedList グルーピングしたリスト
 	 * @return 新しい{@link SimpleExpandableListAdapter}オブジェクト
 	 */
-	public static final SimpleExpandableListAdapter fromOne(Context context, GroupedStringList groupedList) {
+	public static final SimpleExpandableListAdapter fromOne(Context context, GroupedList<String, String> groupedList) {
 		return new SimpleExpandableListAdapter(
                 context,
                 groupedList.mGroupData,
                 android.R.layout.simple_expandable_list_item_1,
-                new String [] {GroupedStringList.GROUP_KEY},
+                new String [] {GroupedList.GROUP_KEY},
                 new int [] {android.R.id.text1},
                 groupedList.mChildData,
                 android.R.layout.simple_expandable_list_item_1,
-                new String [] {GroupedStringList.CHILD_KEY_1},
+                new String [] {GroupedList.CHILD_KEY_1},
                 new int [] {android.R.id.text1}
         );
 	}
@@ -43,16 +43,16 @@ public final class GroupedAdapterBuilder {
 	 * @param groupedList グルーピングしたリスト
 	 * @return 新しい{@link SimpleExpandableListAdapter}オブジェクト
 	 */
-	public static final SimpleExpandableListAdapter fromTwo(Context context, GroupedStringList groupedList) {
+	public static final SimpleExpandableListAdapter fromTwo(Context context, GroupedList<String, String> groupedList) {
 		return new SimpleExpandableListAdapter(
                 context,
                 groupedList.mGroupData,
                 android.R.layout.simple_expandable_list_item_1,
-                new String [] {GroupedStringList.GROUP_KEY},
+                new String [] {GroupedList.GROUP_KEY},
                 new int [] {android.R.id.text1},
                 groupedList.mChildData,
                 android.R.layout.simple_expandable_list_item_2,
-                new String [] {GroupedStringList.CHILD_KEY_1, GroupedStringList.CHILD_KEY_2},
+                new String [] {GroupedList.CHILD_KEY_1, GroupedList.CHILD_KEY_2},
                 new int [] {android.R.id.text1, android.R.id.text2}
         );		
 	}
